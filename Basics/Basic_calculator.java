@@ -34,7 +34,7 @@ public class Calculator {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Enter 1st number");
 		int input1 = sc.nextInt();
-		System.out.println("Enter st number");
+		System.out.println("Enter 2nd number");
 		int input2 = sc.nextInt();
 				
 		Calculator obj = new Calculator(input1,input2); 
