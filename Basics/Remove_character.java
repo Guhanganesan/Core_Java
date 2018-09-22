@@ -40,4 +40,10 @@ Enter charcter to remove
 a
 mlylm
 
+Enter charcter to remove
+m
+alayala
+
+
+
 
