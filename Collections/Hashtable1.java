@@ -31,7 +31,7 @@ public class Hashtable1 {
 	    Enumeration e = marks.elements();
 	    System.out.println(e.nextElement());
 	    
-	    //Print all elements
+	    //Print all values
 	    
 	    while(e.hasMoreElements())
 	    {
@@ -39,8 +39,32 @@ public class Hashtable1 {
 	    }
 	    
 	    
+	    //Display the keys
 	    
-		
-  }
+	    
+	    Enumeration e1 = marks.keys();
+	        
+	    //Print all keys
+	    
+	    while(e1.hasMoreElements())
+	    {
+	    	System.out.println(e1.nextElement());
+	    }
+	    
+	 }
 
 }
+
+
+Result:-
+{Maths=88.85, Science=76, English=64, Tamil=75.5}
+88.85
+{Maths=78, Science=76, English=64, Tamil=75.5}
+78
+76
+64
+75.5
+Maths
+Science
+English
+Tamil
