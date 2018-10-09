@@ -1,8 +1,8 @@
-package Basics;
+package String;
 
 import java.util.Scanner;
 
-public class RemoveDuplicates1 {
+public class GetDuplicates {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -10,6 +10,8 @@ public class RemoveDuplicates1 {
 		String input =sc.next();
 		StringBuilder sb = new StringBuilder(input);
 		int length=sb.length();
+		String temp="";
+		
 		for(int i=0; i<length;i++)
 		{
 			for (int j=i+1; j<length;j++)
@@ -18,20 +20,16 @@ public class RemoveDuplicates1 {
 				char char2 =sb.charAt(j);
 				if(char1==char2)
 				{
-				 sb.deleteCharAt(j);
-				 i=0; j=0;
-				 length=length-1;
+				   String m= Character.toString(char2);
+				   temp=temp+m;
 				}
 			}
 		}
-	System.out.println(sb);
+	System.out.println(temp);
 	}
 }
 
-
 Result:-
-
 Enter String to remove duplicates
-ramanathapuram
-ramnthpu
-
+malayalam
+maaalaaa
