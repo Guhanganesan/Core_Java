@@ -4,7 +4,6 @@ public class HashMap1 {
 
 	public static void main(String[] args) {
 		
-		
 		Map<Integer,String> data = new HashMap<Integer,String>();
                 data.put(1,"Guhan");
                 data.put(2, "Anbu");
@@ -25,6 +24,33 @@ public class HashMap1 {
                 data.replace(3,"Kumar");
                 System.out.println(data);
                 
+                
+                System.out.println("--- print key and values---");
+
+                //Traversing the map
+                
+                Set set = data.entrySet();
+                
+                Iterator itr = set.iterator();
+                
+                while(itr.hasNext())
+                {
+                System.out.println(itr.next());	
+                }
      }
 
 }
+
+Result:-
+
+{null=Jeha, 1=Guhan, 2=Rajesh, 3=Ram}
+--- get value by key-----
+Ram
+--- Remove by key -----
+{1=Guhan, 2=Rajesh, 3=Ram}
+--- Replace values ---
+{1=Guhan, 2=Rajesh, 3=Kumar}
+--- print key and values---
+1=Guhan
+2=Rajesh
+3=Kumar
