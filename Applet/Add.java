@@ -30,3 +30,17 @@ public class Add extends HttpServlet {
 
 Procedure:-
 
+1. Install Eclispe JEE 
+2. Install Tomcat apache server
+3. Open Eclipse on JEE Perpective
+4. Click Servers in console 
+5. Expand Apache
+6. Select tomcat version 7
+7. Next
+8. Go and copy the tomcat path ( Should copy the path before bin )
+9. Paste this path in tomcat installation
+10. Next
+11. Finish
+12. Check console (tomcat v 7 and start )
+13. Double click for changing the port
+
