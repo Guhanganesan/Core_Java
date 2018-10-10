@@ -26,7 +26,15 @@ public class Add extends HttpServlet {
 	}
 }
 
-
+Procedure:-
+	
+1. right click project
+2. New
+3. Servlet
+4.Class Name: Add--> (i.e Add.java)
+5. Finish
+6. Type your code and restart the server 
+7. Go to browser and check: localhost:8080/web1/index.html
 
 
 
