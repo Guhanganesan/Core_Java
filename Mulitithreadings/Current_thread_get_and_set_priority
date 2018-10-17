@@ -1,0 +1,65 @@
+package MultiThread1;
+
+public class Mulitthread10 {
+
+	public static void main(String[] args) throws InterruptedException{
+		
+   Runnable  obj1 = ()->{
+				  		
+				for(int i=0; i<=2;i++)
+				{
+					try {
+						 Thread.sleep(1000);
+						 System.out.println("B"+Thread.currentThread().getPriority());
+						} 
+						catch (InterruptedException e) 
+						{
+						  e.printStackTrace();
+						}
+												
+					}
+				};
+  Runnable  obj2 = ()->{
+			  		
+					for(int i=0; i<=2;i++)
+					{
+						try {
+							 Thread.sleep(1000);
+							 System.out.println("A"+Thread.currentThread().getPriority());
+							} 
+							catch (InterruptedException e) 
+							{
+							  e.printStackTrace();
+							}
+													
+						}
+					};
+			 
+			 Thread time1 = new Thread(obj1);
+			 Thread time2 = new Thread(obj2);
+			        time1.start();
+			        Thread.sleep(20);
+			        time2.start();
+			        //System.out.println(time1.getPriority());//5 --> normal priority
+			        
+			        //time1.setPriority(10);
+			        //time2.setPriority(1);
+			        
+			        //System.out.println(time1.getPriority());//10 --> max priority
+			        //System.out.println(time2.getPriority());//1
+			        
+			        //time1.setPriority(Thread.MAX_PRIORITY);
+			        time1.setPriority(Thread.NORM_PRIORITY);
+			        time2.setPriority(Thread.MIN_PRIORITY);
+		}
+
+}
+
+Result:-
+
+B5
+A1
+B5
+A1
+B5
+A1
