@@ -1,0 +1,37 @@
+package MultiThread1;
+
+public class MultiThread1 {
+	
+	public static void test() 
+	{
+		System.out.println("Hello");
+	}
+
+	public static void test1() 
+	{
+		System.out.println("Dear");
+	}
+
+	public static void test2() 
+	{
+		System.out.println("Friend");
+	}
+    
+	public static void main(String[] args) throws InterruptedException {
+		
+		// The main thread takes 2 second to start call method test()
+		Thread.sleep(2000);
+		test();            // the method test() will call after second
+		Thread.sleep(2000);
+		test1();
+		Thread.sleep(2000);
+		test2();
+ }
+
+}
+
+
+Result:-
+Hello
+Dear
+Friend
