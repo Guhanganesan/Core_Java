@@ -1,0 +1,68 @@
+package MultiThread1;
+
+public class Multithread7 {
+	
+	public static void main(String[] args) throws InterruptedException{
+		
+		  Runnable  obj1 = ()->{
+				  		
+									for(int i=0; i<=2;i++)
+									{
+										try {
+											 Thread.sleep(1000);
+											 System.out.println("B");
+										    } 
+											catch (InterruptedException e) 
+											{
+													
+											 e.printStackTrace();
+											}
+												
+									}
+								 };
+									
+			Runnable  obj2 = ()->{
+												  		
+						for(int i=0; i<=2;i++)
+						{
+							try {
+								 Thread.sleep(1000);
+								 System.out.println("A");
+							    } 
+								catch (InterruptedException e) 
+								{
+										
+								 e.printStackTrace();
+								}
+									
+						}
+			 };		
+			 
+			 Thread time1 = new Thread(obj1);
+			 Thread time2 = new Thread(obj2);
+			        time1.start();
+			        Thread.sleep(20);
+			        time2.start();
+			        
+			        time1.join();//wait main thread
+			        time2.join();
+			        
+			        for(int i=0;i<=2;i++)
+			        {
+			        	System.out.println(i);
+			        }
+			        
+		  
+  }
+}
+
+Result:-
+B
+A
+B
+A
+B
+A
+0
+1
+2
