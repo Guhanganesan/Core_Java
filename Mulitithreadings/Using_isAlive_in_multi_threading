@@ -1,0 +1,74 @@
+package MultiThread1;
+
+public class Multithread8 {
+
+	public static void main(String[] args) throws InterruptedException{
+		
+		  Runnable  obj1 = ()->{
+				  		
+									for(int i=0; i<=2;i++)
+									{
+										try {
+											 Thread.sleep(1000);
+											 System.out.println("B");
+										    } 
+											catch (InterruptedException e) 
+											{
+													
+											 e.printStackTrace();
+											}
+												
+									}
+								 };
+									
+			Runnable  obj2 = ()->{
+												  		
+						for(int i=0; i<=2;i++)
+						{
+							try {
+								 Thread.sleep(1000);
+								 System.out.println("A");
+							    } 
+								catch (InterruptedException e) 
+								{
+										
+								 e.printStackTrace();
+								}
+									
+						}
+			 };		
+			 
+			 Thread time1 = new Thread(obj1);
+			 Thread time2 = new Thread(obj2);
+			        time1.start();
+			        System.out.println(time1.isAlive());//check whether thread is running or not
+
+			        Thread.sleep(20);
+			        time2.start();
+			        
+			        System.out.println(time1.isAlive());
+			        time1.join();
+			        time2.join();
+			        
+			        System.out.println(time1.isAlive());
+                    
+			        for(int i=0;i<=2;i++)
+			        {
+			        	System.out.println(i);
+			        }
+			  }
+}
+
+Result:-
+true
+true
+B
+A
+B
+A
+B
+A
+false
+0
+1
+2
