@@ -14,7 +14,7 @@ public class ScientificCalc extends BasicCalc{
 		ScientificCalc sci = new ScientificCalc();
 		sci.mymethod();
 		
-		int    output1 =  sci.add(20,10);
+	int    output1 =  sci.add(20,10);
         double output2 =  sci.mul(20, 10);
         int    output3 =  sci.sub(20, 10);
         double output4 =  sci.div(20, 10);
