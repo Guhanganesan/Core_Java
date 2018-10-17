@@ -1,0 +1,35 @@
+package MultiThread1;
+public class MultiThread4 implements Runnable {
+
+		public void run()
+		{
+			for(int i=0; i<5; i++)
+			{
+			   try
+			   {
+				 Thread.sleep(2000);
+				 System.out.println(i);
+			   } 
+			   catch (InterruptedException e) 
+			   {
+				e.printStackTrace();
+			   }
+			  
+			}
+		}
+		public static void main(String[] args){
+			
+			MultiThread4 obj = new MultiThread4();
+			Thread time = new Thread(obj);// Dont forget to pass the instance of class here
+			       time.start();
+		}
+
+	}
+
+
+Result:-
+0
+1
+2
+3
+4
