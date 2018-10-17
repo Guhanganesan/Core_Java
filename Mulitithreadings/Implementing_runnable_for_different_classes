@@ -1,0 +1,63 @@
+package MultiThread1;
+
+class Testing implements Runnable{
+	
+	public void run()
+	{
+		for(int i=0; i<=2;i++)
+		{
+			try {
+				Thread.sleep(1000);
+				System.out.println("Test");
+			} 
+			catch (InterruptedException e) 
+			{
+				
+				e.printStackTrace();
+			}
+			
+		}
+	}
+	
+}
+
+public class Multithread5 implements Runnable {
+   
+	    	public void run()
+	    	{
+	    		for(int i=0;i<=2;i++)
+	    		{
+	    			try {
+						Thread.sleep(1000);
+						System.out.println("A");
+					} 
+	    			catch (InterruptedException e) {
+						
+						e.printStackTrace();
+					}
+	    			
+	    		}
+	    	}	  
+	  
+	public static void main(String[] args) throws InterruptedException{
+				
+		  Multithread5 obj = new Multithread5();
+		  Testing  test = new Testing();
+		  
+		  Thread time1 = new Thread(obj);
+		  Thread time2 = new Thread(test);
+		         
+		         time1.start();
+		         Thread.sleep(20);//for maintaing the execution timing
+		         time2.start();
+	}
+	
+}
+
+Result:-
+A
+Test
+A
+Test
+A
+Test
