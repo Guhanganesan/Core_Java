@@ -14,7 +14,7 @@ public class Array4 {
 		int sum=0;
 		int length=arr.length;
 		
-		sum=(length+1)*(length+2)/2;
+		sum=(length+1)*(length+2)/2; //bcz length is less than 1 so add 1 at initial
 		
 		System.out.println(sum);
 		
