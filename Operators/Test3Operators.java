@@ -48,6 +48,14 @@ public class Test3Operators {
 		System.out.println(10<<1);
 		System.out.println(10>>1);
         		
+		char c=97;
+		System.out.println(c);
+		c++;
+		System.out.println(c);
+		
+		char m ='R';
+		m++;
+		System.out.println(m);
 		
 	}
 
