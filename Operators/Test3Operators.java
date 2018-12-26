@@ -5,7 +5,7 @@ public class Test3Operators {
 	public static void main(String[] args) {
 		int a=20;
 		int b=10;
-		/*
+		
 		System.out.println("Arithmetic Operators");
 		System.out.println(a+b);
 		System.out.println(a-b);
@@ -42,7 +42,7 @@ public class Test3Operators {
         System.out.println(10|3);
         System.out.println(10^5); 
         System.out.println(~10);
-        System.out.println(~3); */
+        System.out.println(~3); 
 		
 		System.out.println("Left shift and right shift");
 		System.out.println(10<<1);
