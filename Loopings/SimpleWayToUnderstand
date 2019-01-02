@@ -25,7 +25,7 @@ public class Main
 543				3					j=5,4,3		
 54				4					j=5,4 (5<=5,4<=5)
 5				5					j=5  (5<=5)
-			(i<=rows)					(j>=1)
+			(i<=rows)					(j>=i)
 			
 public class Main
 {
