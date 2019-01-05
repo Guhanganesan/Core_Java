@@ -1,0 +1,21 @@
+54321			i=	1		j=rows	  print(j)	j=5,4,3,2,1 	    j--
+5432				2   						j=5,4,3,2 
+543					3							j=5,4,3		
+54					4							j=5,4 (5<=5,4<=5)
+5					5							j=5  (5<=5)
+			(i<=rows)						(j>=1)
+			
+public class Main
+{
+	public static void main(String[] args) {
+		int rows=5;
+		for (int i=1; i<=rows; i++)
+		{
+		    for(int j=rows; j>=i; j--)
+		    {
+		        System.out.print(j);
+		    }
+		    System.out.println();
+		}
+	}
+}
