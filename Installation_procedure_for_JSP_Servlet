@@ -1,0 +1,50 @@
+Procedure (Fisrt Install Eclipse JEE and Tomcat ) :-
+
+1. Install Eclispe JEE( http://www.eclipse.org/downloads/packages/release/indigo/sr2/eclipse-ide-java-ee-developers )
+2. Install Tomcat apache version 7 ( https://tomcat.apache.org/download-70.cgi ) 
+3. Open Eclipse on JEE Perpective mode 
+4. Click Servers in console 
+5. Expand Apache
+6. Select tomcat version 7 
+7. Click Next (here we need to add the Tomcat path)
+8. After downloading Tomcat server, go and copy the tomcat path ( Should copy the path before bin ) 
+9. Paste this path in tomcat installation
+10. Click Next 
+11. Click Finish 
+12. Check console (tomcat v 7 and start ) 
+13. Double click for changing the port 8080
+
+Procedure to create web applications:-
+
+1. Select file in menu (Eclipse) 
+2. Visit New 
+3. Select Dynamic web project
+4. Assign the your Project Name Ex:( web1)
+5. Click Finish 
+6. Open the project 
+7. right click and create new html file(index.html) 
+8. Go to console (servers) 
+9. right click tomcat v7 
+10. go to add and remove 
+11. select web1 (project) 
+12. Add the project 
+13. click finish 
+14. Go to console tomcat v7 
+15. right click and restart the server 
+16. Open your browser 
+17. Types ( localhost:8080/web1) to view you web applications
+
+Procedure to create servlet:-
+
+1.Right click your project 
+2. visit new 
+3. visit servlet 
+4. Type class name Ex( MyServlet) 
+5. click finish
+6. you can test your servlet code here (MyServlet.java)
+
+Thank you
+
+
+
+
