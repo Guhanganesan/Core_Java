@@ -1,0 +1,55 @@
+Interface and Class:
+
+package MyInterface;
+
+public interface Test1 {
+	int add();
+	int mul();
+
+}
+--------------------------------------
+
+package MyInterface;
+
+public class MyClass implements Test1 {
+
+    int sub()
+    {
+    	return 200;
+    }
+    
+    public int add()
+    {
+    	return 100;
+    }
+    
+    public int mul()
+    {
+    	return 200;
+    }
+        
+	public static void main(String[] args) {
+		
+
+	}
+}
+
+-------------------------------------------------
+
+package MyInterface;
+
+public class Test2 {
+
+	public static void main(String[] args) {
+		
+		Test1 obj = new MyClass();
+             System.out.println(obj.add()); 
+              //obj.sub();//MyClass //Cant access, only can access implemented methods
+             
+	}
+}
+Note:
+     1. We can not create object for interface
+	   2. So, we need to implements any classes
+	    to give the defintion to that methods
+
