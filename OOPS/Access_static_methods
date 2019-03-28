@@ -1,0 +1,33 @@
+package OOPs;
+public class Test {
+	public static String name="Chennai";
+	static void add()
+	{
+		System.out.println(20+80);
+	}
+	static int sub()
+	{
+		return 200-20;
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Using Object");
+	      Test obj = new Test();
+	      obj.add();
+	      System.out.println(obj.sub());
+	      System.out.println("Using Class");
+          Test.add();
+          System.out.println(Test.sub());
+          System.out.println(Test.name);
+   }
+}
+
+Answers:-
+
+Using Object
+100
+180
+Using Class
+100
+180
+Chennai
