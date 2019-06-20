@@ -1,8 +1,6 @@
-package Array;
-
 import java.util.Scanner;
 
-public class Matrix_addition {
+public class Main {
 
 		static int[][] a = new int[2][2]; 
 		static int[][] b = new int[2][2];
@@ -47,8 +45,9 @@ public class Matrix_addition {
 			{
 				for(int j=0; j<s.length;j++)
 				{
-					System.out.println(s[i][j]);
+					System.out.print(" "+s[i][j]);
 				}
+				System.out.println();
 			}
 			
 			
@@ -56,20 +55,20 @@ public class Matrix_addition {
 
 	}
 
+/*
 Result:-
-
 Enter Matrix1:
+1
 2
 3
 4
-5
 Enter Matrix2:
+1
 2
 3
 4
-5
 Sum of matrix is:
-4
-6
-8
-10
+ 2 4
+ 6 8
+
+*/
