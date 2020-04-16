@@ -1,0 +1,41 @@
+class Engg {
+	
+	void collectfee()
+	{
+		System.out.println(50000);
+	}
+    void test()
+    {
+    	System.out.println("test");
+    }
+
+}
+
+
+class Poly extends Engg{
+	
+	void collectfee()
+	{
+		System.out.println(30000);
+	}
+	
+	
+	public static void main(String[] args) {
+		
+		Engg obj =(Engg) new Poly();//upcasting
+		obj.collectfee();//child - parent
+				
+		Engg obj1=new Poly(); //downcasting
+		Poly obj2=(Poly) obj1;//parent to child
+		obj2.collectfee();
+		obj2.test();
+			
+		double x= (int) 125;
+		
+		// Call directly parent
+		Engg obj3 =new Engg();
+		obj3.collectfee();//50000
+
+	}
+
+}
