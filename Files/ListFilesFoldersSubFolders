@@ -1,0 +1,94 @@
+package Test;  // Thank you Mr. Loiane Groner providing this wonderful reference
+
+import java.io.File;
+/**
+ * Contains some methods to list files and folders from a directory
+ *
+ * @author Loiane Groner
+ * http://loiane.com (Portuguese)
+ * http://loianegroner.com (English)
+ */
+public class ListSubDir {
+    /**
+     * List all the files and folders from a directory
+     * @param directoryName to be listed
+     */
+    public void listFilesAndFolders(String directoryName){
+        File directory = new File(directoryName);
+        //get all the files from a directory
+        File[] fList = directory.listFiles();
+        for (File file : fList){
+            System.out.println(file.getName());
+        }
+    }
+    /**
+     * List all the files under a directory
+     * @param directoryName to be listed
+     */
+    public void listFiles(String directoryName){
+        File directory = new File(directoryName);
+        //get all the files from a directory
+        File[] fList = directory.listFiles();
+        for (File file : fList){
+            if (file.isFile()){
+                System.out.println(file.getName());
+            }
+        }
+    }
+    /**
+     * List all the folder under a directory
+     * @param directoryName to be listed
+     */
+    public void listFolders(String directoryName){
+        File directory = new File(directoryName);
+        //get all the files from a directory
+        File[] fList = directory.listFiles();
+        for (File file : fList){
+            if (file.isDirectory()){
+                System.out.println(file.getName());
+            }
+        }
+    }
+    /**
+     * List all files from a directory and its subdirectories
+     * @param directoryName to be listed
+     */
+    public void listFilesAndFilesSubDirectories(String directoryName){
+        File directory = new File(directoryName);
+        //get all the files from a directory
+        File[] fList = directory.listFiles();
+        for (File file : fList){
+            if (file.isFile()){
+                System.out.println(file.getAbsolutePath());
+            } else if (file.isDirectory()){
+                listFilesAndFilesSubDirectories(file.getAbsolutePath());
+            }
+        }
+    }
+    public static void main (String[] args){
+        ListSubDir listFilesUtil = new ListSubDir();
+        final String directoryLinuxMac ="/Users/loiane/test";
+        //Windows directory example
+        final String directoryWindows ="D:\\Users\\guhan.ganesh\\eclipse-workspace\\Test\\Files";
+        //listFilesUtil.listFiles(directoryWindows);
+        listFilesUtil.listFilesAndFilesSubDirectories(directoryWindows);
+    }
+}
+
+
+Ans:-
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Guhan.docx
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Guhan.pdf
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Guhan.txt
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Guhan.xml
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\myfile.txt
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\Anbu.docx
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\Anbu.pdf
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\Anbu.txt
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\Anbu.xml
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\documents\myfile.txt
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\documents\Raja.docx
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\documents\Raja.pdf
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\documents\Raja.txt
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\documents\Raja.xml
+D:\Users\guhan.ganesh\eclipse-workspace\Test\Files\Projects\myfile.txt
