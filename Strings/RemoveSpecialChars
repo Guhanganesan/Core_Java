@@ -1,0 +1,28 @@
+package Test;
+
+public class Test{
+	
+   public static void main(String[] args) {
+
+	   String tc="go#ku23l";
+		
+		char[] f=tc.toCharArray();
+		
+		String temp="";
+		
+		for(char g: f) {
+			
+			int k =g;
+			
+			if(k>=97&&k<=123) {
+				
+			//	char j=(char) k;
+				temp=temp+(char)k;
+			}
+			
+			
+		}
+		System.out.println(temp);
+
+	}
+}
