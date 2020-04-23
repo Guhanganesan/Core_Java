@@ -1,0 +1,25 @@
+package Test;
+
+import java.util.Scanner;
+
+public class Test{
+	
+   public static void main(String[] args) {
+
+	   Scanner sc = new Scanner(System.in);
+		System.out.println("Enter any string");
+
+		String ob=sc.next();
+		char[] chr=ob.toCharArray();
+		String temp="";
+
+		for(char c: chr) {
+
+			int k=c+2;
+			char g=(char)k;
+			temp=temp+g;			
+		}
+
+		System.out.println(temp);
+	}
+}
