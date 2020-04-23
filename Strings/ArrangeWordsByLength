@@ -1,0 +1,40 @@
+import java.util.Scanner;
+
+public class Folder {
+
+	public static void main(String[] args)  {
+
+		//String d="She is my dear friend";
+
+		Scanner sc = new Scanner (System.in);
+
+		System.out.println("Please enter the name");
+		String s=	sc.nextLine();
+
+		String[] sr= s.split(" ");
+
+		for( int i=0; i<sr.length;i++) {
+
+
+			for( int j=0; j<sr.length; j++) {
+
+
+				if(sr[i].length()>sr[j].length()) {
+
+					String temp=sr[i];
+					sr[i]=sr[j];
+					sr[j] =temp;
+				}
+			}
+
+			
+		}
+		for(String so: sr) {
+
+			System.out.println(so+" length " +so.length());
+		}
+
+
+
+	}
+}
