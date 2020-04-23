@@ -1,0 +1,135 @@
+package Test;
+
+
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
+
+public class Test{
+	
+	//ASCII for Special Chars
+	/*
+		33	!
+		34	"
+		35	#
+		36	$
+		37	%
+		38	&
+		39	'
+		40	(
+		41	)
+		42	*
+		43	+
+		44	,
+		45	-
+		46	.
+	*/
+	public static void main(String[] args) {
+		
+		String str=new String("Chennai City");
+		System.out.println(str.charAt(1));
+		System.out.println("Anbu".compareTo("Raja"));
+		System.out.println("Raja".compareTo("Anbu"));
+		System.out.println("ABC".contains("ABC"));
+		String a="ABC";
+		String b=new String("ABC");
+		System.out.println(a.contains(b));
+		System.out.println(a.equals(b));
+		System.out.println(a==b);
+		System.out.println(a == b.intern());
+		
+		String c=new String("Hello");
+		String d=new String("Hello");
+		System.out.println(c==d);
+		System.out.println(c.intern()==d.intern());
+        System.out.println(c.equals(d));
+        
+        String e="Guhan";
+        System.out.println(e.concat("Ganesan"));
+        System.out.println(e);
+        
+        System.out.println(str.endsWith("City"));
+        System.out.println(str.endsWith("Chennai"));
+        
+        System.out.println(str.startsWith("City"));
+        System.out.println(str.startsWith("Chennai"));
+        
+        System.out.println(str.equalsIgnoreCase(" chennaI city"));
+        System.out.println(str.isEmpty());
+        System.out.println(str.lastIndexOf("i"));
+        System.out.println(str.length());
+        System.out.println(str.replace('n', 'm'));
+        System.out.println(str);
+        
+        //System.out.println(str.matches("City"));
+        
+        System.out.println(str.substring(3, 9));
+        System.out.println(str.trim());//Remove White Space
+        
+        String f="Hello/How/Are/You";
+        
+        String[] s=f.split("/"); //{"Hello","How","Are","You"}
+        System.out.println(s);
+        for(String k: s)
+        {
+        	
+        	System.out.println(k);
+        }
+             
+        System.out.println(str.join("@", "Hello","How","Are"));
+        System.out.println(str.subSequence(3, 8));
+        //System.out.println(str.valueOf('Z'));  
+        String s1="Guhan";
+        CharSequence s2="Guhan";
+        System.out.println(s1==s2);
+	    
+        System.out.println(s1.matches("han"));
+        System.out.println(s1.matches("Guhan"));
+        
+        char i = (char) 98;
+        System.out.println(i);
+        int j = (int) 'k';
+        System.out.println(j);
+        
+        
+	}
+}
+
+Ans:-
+h
+-17
+17
+true
+true
+true
+false
+true
+false
+true
+true
+GuhanGanesan
+Guhan
+true
+false
+false
+true
+false
+false
+9
+12
+Chemmai City
+Chennai City
+nnai C
+Chennai City
+[Ljava.lang.String;@67b64c45
+Hello
+How
+Are
+You
+Hello@How@Are
+nnai 
+true
+false
+true
+b
+107
