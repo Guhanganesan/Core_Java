@@ -1,0 +1,40 @@
+package MyCollections;
+
+public class Test {
+
+	public static void main(String[] args) {
+		
+		String s="gokul selvanthan";
+		
+		String[] sa=s.split(" ");
+		String[] temp=new String[sa.length];
+		
+	    for(int z=0; z<sa.length; z++)
+	    {
+	    	//System.out.println(sa[z]);
+	    	
+	    	char[] chr = sa[z].toCharArray();
+	    	String ntemp="";
+	    	for(int i=0; i<chr.length; i++)
+	    	{
+	    		if(i==0)
+	    		{
+	    			int m=(int) chr[i];
+	    			chr[i]=(char)(m-32);
+	    		}
+	    		ntemp=ntemp+chr[i];
+	    	}
+	    	temp[z]=ntemp;    	
+	    }
+        
+	    for(int m=0; m<temp.length; m++)
+	    {
+	    	System.out.print(temp[m]+" ");
+	    }
+	    for(int m=temp.length-1; m>=0; m--)
+	    {
+	    	System.out.print(temp[m]+" ");
+	    }
+	}
+
+}
