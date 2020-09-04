@@ -14,10 +14,10 @@ public class Addition1 {
 	            	return a;
 	            }
 	            
-	public static void main(String[] args) {
+		   public static void main(String[] args) {
 		       System.out.println(number1());
 		       System.out.println(number2());
-		       int b= number1();
+		       int b = number1();
 		       int c = number2();
 		       int d = b+c;//250
 		       int e = b-c;//150
@@ -28,6 +28,6 @@ public class Addition1 {
 		       System.out.println(e);
 		       System.out.println(f);
 		       System.out.println(g);
-	}
+		}
 
 }
