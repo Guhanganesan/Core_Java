@@ -1,5 +1,5 @@
 package Basics;
-
+//import Scanner class
 import java.util.Scanner;
 
 public class Addition {
